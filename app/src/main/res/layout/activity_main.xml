@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/phoneNumber"
+            android:layout_weight=".7"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:id="@+id/button2"
+            android:onClick="addNumber"
+            android:focusableInTouchMode="true"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add From Contact"
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal"
+        android:onClick="getContacts"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight=".8"
+        />
+
+    <Button android:id="@+id/nukeList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Zuke List"
+        android:onClick="deleteTexts"
+        />
+
+    <Button android:id="@+id/nukeAll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Zuke All"
+        android:onClick="deleteAll"
+        />
+
+
+</LinearLayout>
